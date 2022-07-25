@@ -98,7 +98,9 @@ hr {
 .courses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 23px;
+    grid-column-gap: 30px;
+
+
 
 }
 
@@ -111,6 +113,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 
 }
 
@@ -130,5 +133,47 @@ hr {
 
 .fa-star.empty {
     color: #AEAEAE;
+
+}
+
+/*
+                    Media Queries
+                                        */
+
+/*        MOBILE      */
+@media only screen and (max-width: 688px) {
+    .container {
+        width: 100%;
+    }
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* TABLET  */
+@media screen and (min-width: 689px) and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
 
 }
